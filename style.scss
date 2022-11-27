@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500&display=swap");
+
+body {
+  font-family: "Barlow", sans-serif;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// VARIABLES
+
+$sm: 12px;
+$md: 18px;
+$lg: 24px;
+
+$border: 1px solid black;
+
+$thin: 300;
+$reg: 400;
+$bold: 500;
+
+// COMPONENT STYLES
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.component {
+  border: $border;
+  padding: 10px;
+  width: 80vw;
+
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .info-wrapper {
+      display: flex;
+      align-items: center;
+
+      img {
+        $size: 40px;
+        width: $size;
+        height: $size;
+        border: $border;
+        border-radius: 50%;
+      }
+
+      .info {
+        padding-left: 5px;
+
+        h1 {
+          font-size: $md;
+        }
+        p {
+          font-size: $sm;
+          opacity: 0.5;
+        }
+      }
+    }
+    .component-type {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 8px;
+      background-color: rgb(0, 32, 138);
+      border-radius: 15px;
+
+      p {
+        color: white;
+        height: fit-content;
+        font-size: $sm;
+        font-weight: $bold;
+        padding-bottom: 2px;
+      }
+    }
+  }
+
+  h2 {
+    margin-top: 10px;
+    font-weight: $thin;
+    font-size: $lg;
+  }
+}
